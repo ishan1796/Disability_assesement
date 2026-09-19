@@ -1,0 +1,40 @@
+{
+  "joint": "ankle",
+  "name": "Ankle Joint Assessment Rules",
+  "movements": {
+    "dorsiflexion": {
+      "normal_angle": 20,
+      "rules": [
+        { "min": 15, "max": 20, "score": 0, "severity": "Normal", "reason": "Normal ankle dorsiflexion (15° - 20°)." },
+        { "min": 10, "max": 14, "score": 5, "severity": "Mild", "reason": "Mild restriction in ankle dorsiflexion (10° - 14°)." },
+        { "min": 5, "max": 9, "score": 15, "severity": "Moderate", "reason": "Moderate restriction in ankle dorsiflexion (5° - 9°)." },
+        { "min": 0, "max": 4, "score": 25, "severity": "Severe", "reason": "Severe restriction in ankle dorsiflexion (<5°)." }
+      ]
+    },
+    "plantar_flexion": {
+      "normal_angle": 45,
+      "rules": [
+        { "min": 35, "max": 45, "score": 0, "severity": "Normal", "reason": "Normal ankle plantar flexion (35° - 45°)." },
+        { "min": 20, "max": 34, "score": 5, "severity": "Mild", "reason": "Mild restriction in ankle plantar flexion (20° - 34°)." },
+        { "min": 0, "max": 19, "score": 15, "severity": "Severe", "reason": "Severe restriction in ankle plantar flexion (<20°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_walk_heel_toe": { "Yes": 0, "Partial": 5, "No": 10 },
+    "foot_drop_tendency": { "No": 0, "Yes": 10 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Foot Drop / Peroneal Nerve Palsy",
+      "rule": "dorsiflexion < 5 OR foot_drop_tendency == 'Yes'",
+      "description": "Inability to lift front part of the foot causing dragging during gait."
+    },
+    {
+      "condition": "Ankle Equinus Contracture",
+      "rule": "dorsiflexion < 8 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Limited ankle dorsiflexion restricting normal walking stance."
+    }
+  ]
+}

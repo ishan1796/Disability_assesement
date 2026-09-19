@@ -1,0 +1,34 @@
+{
+  "joint": "knee",
+  "name": "Knee Joint Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 140,
+      "rules": [
+        { "min": 125, "max": 140, "score": 0, "severity": "Normal", "reason": "Normal knee flexion (125° - 140°)." },
+        { "min": 100, "max": 124, "score": 5, "severity": "Mild", "reason": "Mild restriction in knee flexion (100° - 124°)." },
+        { "min": 75, "max": 99, "score": 15, "severity": "Moderate", "reason": "Moderate restriction in knee flexion (75° - 99°)." },
+        { "min": 45, "max": 74, "score": 25, "severity": "Severe", "reason": "Severe restriction in knee flexion (45° - 74°)." },
+        { "min": 0, "max": 44, "score": 35, "severity": "Very Severe", "reason": "Profound loss of knee flexion (<45°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_squat": { "Yes": 0, "Partial": 5, "No": 10 },
+    "can_climb_stairs": { "Yes": 0, "Partial": 5, "No": 10 },
+    "can_walk_unassisted": { "Yes": 0, "No": 10 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Knee Osteoarthritis",
+      "rule": "flexion < 110 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Degenerative joint wear causing stiffness and stair climbing difficulty."
+    },
+    {
+      "condition": "Knee Flexion Contracture",
+      "rule": "flexion < 80",
+      "description": "Severe restriction in knee bending impacting squatting and gait."
+    }
+  ]
+}

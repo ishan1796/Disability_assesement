@@ -1,0 +1,34 @@
+{
+  "joint": "elbow",
+  "name": "Elbow Joint Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 145,
+      "rules": [
+        { "min": 130, "max": 145, "score": 0, "severity": "Normal", "reason": "Normal elbow flexion (130° - 145°)." },
+        { "min": 100, "max": 129, "score": 5, "severity": "Mild", "reason": "Mild restriction in elbow flexion (100° - 129°)." },
+        { "min": 70, "max": 99, "score": 15, "severity": "Moderate", "reason": "Moderate restriction in elbow flexion (70° - 99°)." },
+        { "min": 40, "max": 69, "score": 25, "severity": "Severe", "reason": "Severe restriction in elbow flexion (40° - 69°)." },
+        { "min": 0, "max": 39, "score": 35, "severity": "Very Severe", "reason": "Profound loss of elbow flexion (<40°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_bend_arm": { "Yes": 0, "Partial": 5, "No": 10 },
+    "can_carry_objects": { "Yes": 0, "No": 5 },
+    "can_touch_face": { "Yes": 0, "No": 5 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Elbow Flexion Contracture",
+      "rule": "flexion < 100",
+      "description": "Inability to achieve functional elbow flexion for eating or face touching."
+    },
+    {
+      "condition": "Cubital Tunnel / Post-Traumatic Stiffness",
+      "rule": "flexion < 120 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Joint stiffness accompanied by movement-related elbow discomfort."
+    }
+  ]
+}

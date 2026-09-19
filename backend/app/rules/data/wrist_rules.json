@@ -1,0 +1,27 @@
+{
+  "joint": "wrist",
+  "name": "Wrist Joint Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 80,
+      "rules": [
+        { "min": 65, "max": 80, "score": 0, "severity": "Normal", "reason": "Normal wrist flexion (65° - 80°)." },
+        { "min": 45, "max": 64, "score": 5, "severity": "Mild", "reason": "Mild restriction in wrist flexion (45° - 64°)." },
+        { "min": 25, "max": 44, "score": 10, "severity": "Moderate", "reason": "Moderate restriction in wrist flexion (25° - 44°)." },
+        { "min": 0, "max": 24, "score": 20, "severity": "Severe", "reason": "Severe restriction in wrist flexion (<25°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_grip_objects": { "Yes": 0, "Partial": 4, "No": 8 },
+    "can_type_or_write": { "Yes": 0, "No": 5 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Carpal Tunnel Syndrome / Wrist Arthrodesis Stiffness",
+      "rule": "flexion < 40 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Wrist movement restriction affecting manual dexterity."
+    }
+  ]
+}

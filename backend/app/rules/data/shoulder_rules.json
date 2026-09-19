@@ -1,0 +1,44 @@
+{
+  "joint": "shoulder",
+  "name": "Shoulder Joint Assessment (RPwD Gazette Guidelines 2024)",
+  "max_joint_weight": 20.0,
+  "movements": {
+    "flexion": {
+      "normal_angle": 180,
+      "rules": [
+        { "min": 161, "max": 180, "score": 0.0, "severity": "Normal", "reason": "Normal shoulder flexion (161° - 180°). Loss < 10%." },
+        { "min": 121, "max": 160, "score": 6.7, "severity": "Mild", "reason": "Mild restriction (< 1/3 loss of ROM). Assigned 1/3 of joint weightage (6.7% PPI)." },
+        { "min": 61, "max": 120, "score": 13.3, "severity": "Moderate", "reason": "Moderate restriction (1/3 to 2/3 loss of ROM). Assigned 2/3 of joint weightage (13.3% PPI)." },
+        { "min": 0, "max": 60, "score": 20.0, "severity": "Severe", "reason": "Severe restriction (> 2/3 loss of ROM). Assigned full joint weightage (20.0% PPI)." }
+      ]
+    },
+    "abduction": {
+      "normal_angle": 180,
+      "rules": [
+        { "min": 161, "max": 180, "score": 0.0, "severity": "Normal", "reason": "Normal shoulder abduction (161° - 180°)." },
+        { "min": 121, "max": 160, "score": 6.7, "severity": "Mild", "reason": "Mild impairment in shoulder abduction." },
+        { "min": 61, "max": 120, "score": 13.3, "severity": "Moderate", "reason": "Moderate impairment in shoulder abduction." },
+        { "min": 0, "max": 60, "score": 20.0, "severity": "Severe", "reason": "Severe impairment in shoulder abduction." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0.0, "Mild": 3.0, "Moderate": 6.0, "Severe": 9.0 },
+    "can_raise_arm": { "Yes": 0.0, "Partial": 4.5, "No": 9.0 },
+    "can_lift_weight": { "Yes": 0.0, "No": 4.5 },
+    "can_comb_hair": { "Yes": 0.0, "No": 4.5 },
+    "can_wear_clothes": { "Yes": 0.0, "No": 4.5 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Frozen Shoulder (Adhesive Capsulitis)",
+      "rule": "flexion < 100 AND abduction < 90",
+      "description": "Global active/passive shoulder ROM restriction per Gazette criteria."
+    },
+    {
+      "condition": "Shoulder Impingement / Rotator Cuff Deficit",
+      "rule": "flexion < 140 OR abduction < 130",
+      "description": "Partial overhead elevation or lateral reach restriction."
+    }
+  ]
+}

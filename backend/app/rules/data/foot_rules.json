@@ -1,0 +1,25 @@
+{
+  "joint": "foot",
+  "name": "Foot / Toe Assessment Rules",
+  "movements": {
+    "toe_flexion": {
+      "normal_angle": 40,
+      "rules": [
+        { "min": 30, "max": 40, "score": 0, "severity": "Normal", "reason": "Normal toe motion (30° - 40°)." },
+        { "min": 15, "max": 29, "score": 5, "severity": "Mild", "reason": "Mild restriction in toe movement (15° - 29°)." },
+        { "min": 0, "max": 14, "score": 15, "severity": "Severe", "reason": "Severe restriction in toe flexion (<15°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_bear_weight": { "Yes": 0, "Partial": 5, "No": 10 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Plantar Fasciitis / Hallux Rigidus",
+      "rule": "toe_flexion < 15 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Foot pain during weight bearing and toe push-off."
+    }
+  ]
+}

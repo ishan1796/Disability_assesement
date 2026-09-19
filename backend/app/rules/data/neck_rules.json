@@ -1,0 +1,41 @@
+{
+  "joint": "neck",
+  "name": "Cervical Spine (Neck) Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 45,
+      "rules": [
+        { "min": 35, "max": 45, "score": 0, "severity": "Normal", "reason": "Normal neck flexion (35° - 45°)." },
+        { "min": 25, "max": 34, "score": 5, "severity": "Mild", "reason": "Mild restriction in neck forward flexion (25° - 34°)." },
+        { "min": 15, "max": 24, "score": 10, "severity": "Moderate", "reason": "Moderate restriction in neck forward flexion (15° - 24°)." },
+        { "min": 0, "max": 14, "score": 20, "severity": "Severe", "reason": "Severe restriction in neck forward flexion (<15°)." }
+      ]
+    },
+    "rotation": {
+      "normal_angle": 80,
+      "rules": [
+        { "min": 65, "max": 80, "score": 0, "severity": "Normal", "reason": "Normal neck rotation (65° - 80°)." },
+        { "min": 45, "max": 64, "score": 5, "severity": "Mild", "reason": "Mild restriction in neck rotation (45° - 64°)." },
+        { "min": 25, "max": 44, "score": 10, "severity": "Moderate", "reason": "Moderate restriction in neck rotation (25° - 44°)." },
+        { "min": 0, "max": 24, "score": 20, "severity": "Severe", "reason": "Severe restriction in neck rotation (<25°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "radiation_to_arm": { "No": 0, "Yes": 8 },
+    "can_turn_head": { "Yes": 0, "Partial": 3, "No": 5 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Cervical Spondylosis / Cervical Radiculopathy",
+      "rule": "rotation < 45 AND radiation_to_arm == 'Yes'",
+      "description": "Degenerative cervical changes with potential nerve root involvement."
+    },
+    {
+      "condition": "Cervical Stiffness / Torticollis",
+      "rule": "flexion < 25 OR rotation < 40",
+      "description": "Restricted cervical range of motion."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "shoulder": {
+    "flexion": 180,
+    "extension": 60,
+    "abduction": 180,
+    "adduction": 50,
+    "internal_rotation": 90,
+    "external_rotation": 90
+  },
+  "elbow": {
+    "flexion": 145,
+    "extension": 0,
+    "pronation": 80,
+    "supination": 80
+  },
+  "wrist": {
+    "flexion": 80,
+    "extension": 70,
+    "radial_deviation": 20,
+    "ulnar_deviation": 30
+  },
+  "hand": {
+    "finger_flexion": 90,
+    "thumb_abduction": 70
+  },
+  "hip": {
+    "flexion": 125,
+    "extension": 15,
+    "abduction": 45,
+    "adduction": 30,
+    "internal_rotation": 45,
+    "external_rotation": 45
+  },
+  "knee": {
+    "flexion": 140,
+    "extension": 0
+  },
+  "ankle": {
+    "plantar_flexion": 45,
+    "dorsiflexion": 20,
+    "inversion": 30,
+    "eversion": 20
+  },
+  "foot": {
+    "toe_flexion": 40,
+    "toe_extension": 40
+  },
+  "neck": {
+    "flexion": 45,
+    "extension": 45,
+    "lateral_flexion": 45,
+    "rotation": 80
+  },
+  "spine": {
+    "flexion": 90,
+    "extension": 30,
+    "lateral_flexion": 30,
+    "rotation": 40
+  }
+}

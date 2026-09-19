@@ -1,0 +1,27 @@
+{
+  "joint": "hand",
+  "name": "Hand / Finger Assessment Rules",
+  "movements": {
+    "finger_flexion": {
+      "normal_angle": 90,
+      "rules": [
+        { "min": 75, "max": 90, "score": 0, "severity": "Normal", "reason": "Normal finger flexion (75° - 90°)." },
+        { "min": 50, "max": 74, "score": 5, "severity": "Mild", "reason": "Mild restriction in fist closure (50° - 74°)." },
+        { "min": 25, "max": 49, "score": 10, "severity": "Moderate", "reason": "Moderate restriction in fist closure (25° - 49°)." },
+        { "min": 0, "max": 24, "score": 20, "severity": "Severe", "reason": "Severe loss of finger flexion (<25°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_make_fist": { "Yes": 0, "Partial": 4, "No": 8 },
+    "can_pinch_objects": { "Yes": 0, "No": 5 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Rheumatoid Arthritis / Dupuytren Contracture",
+      "rule": "finger_flexion < 50",
+      "description": "Limitation in full fist closure and fine pinch function."
+    }
+  ]
+}

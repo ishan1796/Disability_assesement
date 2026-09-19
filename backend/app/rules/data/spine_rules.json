@@ -1,0 +1,32 @@
+{
+  "joint": "spine",
+  "name": "Thoracolumbar Spine Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 90,
+      "rules": [
+        { "min": 75, "max": 90, "score": 0, "severity": "Normal", "reason": "Normal spine forward flexion (75° - 90°)." },
+        { "min": 50, "max": 74, "score": 10, "severity": "Mild", "reason": "Mild restriction in spine bending (50° - 74°)." },
+        { "min": 30, "max": 49, "score": 20, "severity": "Moderate", "reason": "Moderate restriction in spine bending (30° - 49°)." },
+        { "min": 0, "max": 29, "score": 35, "severity": "Severe", "reason": "Severe restriction in spine forward flexion (<30°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_bend_forward": { "Yes": 0, "Partial": 5, "No": 10 },
+    "radiation_to_leg": { "No": 0, "Yes": 8 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Lumbar Disc Herniation / Sciatica",
+      "rule": "flexion < 45 AND radiation_to_leg == 'Yes'",
+      "description": "Lumbar flexion limitation with radicular leg symptoms."
+    },
+    {
+      "condition": "Ankylosing Spondylitis / Spinal Stiffness",
+      "rule": "flexion < 40",
+      "description": "Rigidity and marked loss of lumbar/thoracic mobility."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "joint": "hip",
+  "name": "Hip Joint Assessment Rules",
+  "movements": {
+    "flexion": {
+      "normal_angle": 125,
+      "rules": [
+        { "min": 110, "max": 125, "score": 0, "severity": "Normal", "reason": "Normal hip flexion (110° - 125°)." },
+        { "min": 85, "max": 109, "score": 5, "severity": "Mild", "reason": "Mild restriction in hip flexion (85° - 109°)." },
+        { "min": 60, "max": 84, "score": 15, "severity": "Moderate", "reason": "Moderate restriction in hip flexion (60° - 84°)." },
+        { "min": 35, "max": 59, "score": 25, "severity": "Severe", "reason": "Severe restriction in hip flexion (35° - 59°)." },
+        { "min": 0, "max": 34, "score": 35, "severity": "Very Severe", "reason": "Profound restriction in hip flexion (<35°)." }
+      ]
+    }
+  },
+  "questionnaire_scoring": {
+    "pain_level": { "None": 0, "Mild": 2, "Moderate": 5, "Severe": 10 },
+    "can_sit_comfortably": { "Yes": 0, "Partial": 3, "No": 5 },
+    "can_walk_distance": { "Yes": 0, "Partial": 5, "No": 10 }
+  },
+  "disease_suggestions": [
+    {
+      "condition": "Hip Osteoarthritis / Stiffness",
+      "rule": "flexion < 90 AND pain_level in ['Moderate', 'Severe']",
+      "description": "Hip stiffness affecting sitting, walking, and lower body flex."
+    }
+  ]
+}
